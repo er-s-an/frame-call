@@ -2,13 +2,44 @@
 
 Taste-grounded music and shot decisions for a brand film. Remove Qloo and there is nothing to call.
 
-This file is the English packet. The runnable app is `app/` in the competition workspace and the root of the public repository. Paste `DEVPOST.md` (workspace path `app/DEVPOST.md`) into Devpost. Walk `DEMO.md` for the two-minute demo. License is MIT at `LICENSE`.
+This file is the English packet. Paste `DEVPOST.md` into Devpost. Speak `DEMO.md` if someone records the optional two-minute clip. License is MIT at `LICENSE`.
 
-Public fixture demo: https://er-s-an.github.io/frame-call/
+Do not click Submit from this file. This machine has no `QLOO_API_KEY`. The public demo stays on the fixture banner.
 
-Repository: https://github.com/er-s-an/frame-call
+## Links
 
-That host is GitHub Pages. There is no server and no `QLOO_API_KEY`. The fixture runs in the browser. The banner says FIXTURE. IDs start with `fixture:`. The signed summary is checked in the browser with the demo receipt key that already ships in the repository. It is not the Qloo key. The anonymous Vercel URL expired at 2026-10-10 21:20 UTC. This file is not a Devpost entry and not a live Qloo call. Do not click Submit.
+| | |
+| --- | --- |
+| Try it out | https://er-s-an.github.io/frame-call/ |
+| Repository | https://github.com/er-s-an/frame-call |
+| License | MIT. GitHub About shows MIT License. File: `LICENSE`. |
+| Checked | 2026-10-11, commit `8068c9fcd20290d17147dbeca0ff5fc60e1ecabf` |
+
+That host is GitHub Pages, source `/docs` on `main`, status `built`. There is no server and no `QLOO_API_KEY`. The fixture runs in the browser. The banner says FIXTURE. IDs start with `fixture:`. The signed summary is checked in the browser with the demo receipt key that already ships in the repository. It is not the Qloo key. The anonymous Vercel URL expired at 2026-10-10 21:20 UTC. Do not paste it.
+
+## What collapses without Qloo
+
+The left column can still say Lo-fi and "Slow push-in. Warm bokeh." It has no entity ID. These steps on the right cannot:
+
+- `GET /search` never resolves a destination or a brand, so there is no signal.
+- `GET /v2/tags` never attaches.
+- `GET /v2/insights` never returns an artist or a movie, and explainability never returns contributor scores.
+- The 0.10 rule has nothing to measure, so both calls stay withdrawn.
+- There is nothing to sign.
+
+Adjectives are not a call. The contrast brief is the on-screen proof: a Tokyo record shop withdraws to Nothing to call, and the coffee entities are not reused.
+
+## Judge path, two minutes
+
+No login. Open https://er-s-an.github.io/frame-call/ . If the banner says FIXTURE, say the IDs were written for the demo. Do not show an API key or an `X-Api-Key` header. Devpost does not require a video. `DEMO.md` is the spoken script for the same path.
+
+1. The Hong Kong coffee brief is already loaded: `香港独立咖啡品牌，要一条 15 秒的开业片`. Left: Lo-fi, slow push-in, warm bokeh, no ID. Right: Hong Kong and The Coffee Academics in. Tatsuro Yamashita out at affinity 0.74, contributors 0.61 and 0.33. In the Mood for Love out at affinity 0.69, contributors 0.72 and 0.22. The rule on the slip is a contributor of at least 0.10.
+2. Open Request trace. Fixture rows say NOT SENT. Read the two insights rows: `urn:entity:artist` and `urn:entity:movie`, both with `feature.explainability=true`. On this host every row says NOT SENT.
+3. Click Contrast brief. The line becomes `东京唱片店，要一条 15 秒的片`. The right side says Nothing to call. Nothing to sign. The coffee entities are gone. Say this line is the control, not a second city.
+4. Click Demo scene. Click Signed summary of these IDs. The page says HOLDS. Mode says "Fixture. Not a live Qloo response." The music ID `fixture:artist:tatsuro-yamashita` and the camera ID `fixture:movie:in-the-mood-for-love` match the slip. Say the signature is a demo key in the repo, not the Qloo key.
+5. Close on the line: remove Qloo and the right column has nothing to commit.
+
+Walked on the public URL on 2026-10-11. The page requested only `er-s-an.github.io`. `GET /api/call` on that host is 404. The in-page link opens `verify.html`. `GET /verify` on Pages also returns that file. `GET /verify/` is 404, so use the link.
 
 ## Devpost
 
@@ -16,56 +47,34 @@ That host is GitHub Pages. There is no server and no `QLOO_API_KEY`. The fixture
 
 **Tagline:** Taste-grounded music and shot decisions for a brand film. Remove Qloo and there is nothing to call.
 
-**Description:**
+**Try it out:** https://er-s-an.github.io/frame-call/
 
-Frame Call is a one-screen desk for a 15-second brand opening film. A producer pastes one brief. The left column is a generic answer with no entity IDs: Lo-fi, a slow push-in, warm bokeh. The right column is a Qloo slip. It commits a music call and a camera call only when the taste graph returns entities and an explainability path.
+**Repository:** https://github.com/er-s-an/frame-call
 
-The demo brief is a Hong Kong independent coffee brand. The agent resolves Hong Kong (destination) and The Coffee Academics (brand) with GET /search, a coffee tag with GET /v2/tags, then calls GET /v2/insights twice with feature.explainability=true: once for urn:entity:artist and once for urn:entity:movie. A commit requires a contributor score of at least 0.10 from an input entity. The slip shows the entity IDs, the affinity, and those scores. A signed summary on /verify repeats the IDs. The signature uses a demo key that ships in the repository. It is not the Qloo key, and it does not prove the film will work.
+**License:** MIT
 
-There is a second brief, and only one. It is a Tokyo record shop, 15 seconds. It is the contrast, not a second city. The right column withdraws: Nothing to call. The coffee entities are not reused. Nothing is signed.
+**Built with:** Next.js, TypeScript, Qloo Hackathon API (`GET /search`, `GET /v2/tags`, `GET /v2/insights` with `feature.explainability=true`).
 
-What collapses without Qloo:
+The long description, including the fixture sentence, the collapse list, the MIT line, and the two-minute path, is the paste block in `DEVPOST.md`.
 
-- /search never resolves a destination or a brand, so there is no signal.
-- /v2/tags never attaches.
-- /v2/insights never returns an artist or a movie, and explainability never returns contributor scores.
-- The 0.10 rule has nothing to measure, so both calls stay withdrawn.
-- There is nothing to sign.
+## Repo and Pages
 
-The left column can still print adjectives. That is the point. Adjectives are not a call.
+Compared on 2026-10-11, before this packet edit. Local `main`, `origin/main`, and GitHub `main` were `8068c9fcd20290d17147dbeca0ff5fc60e1ecabf`. Pages `html_url` is https://er-s-an.github.io/frame-call/ . This packet edit does not change `docs/`. These files matched byte for byte between `docs/` in that commit and the live host:
 
-How to try it, no login:
+- `index.html`
+- `verify.html`
+- `client.js`
+- `verify.js`
+- `globals.css`
+- `.nojekyll`
 
-1. Open the site. Read the banner. FIXTURE means QLOO_API_KEY is not set and the IDs start with fixture:. LIVE means this request hit hackathon.api.qloo.com. The public Pages demo has no server, so it stays on FIXTURE.
-2. The demo brief is already filled in. The left column has no IDs. The right column names the entities and the scores.
-3. Open the request trace.
-4. Click Contrast brief. The right side says Nothing to call.
-5. Click Demo scene to restore the slip.
-6. Open the signed summary. It should say HOLDS.
-
-The Qloo key stays on the server as QLOO_API_KEY. It is not a NEXT_PUBLIC_ variable and it is not in the repository. Without a key the public demo still runs, in fixture mode, and the banner says so.
-
-Built for the Qloo Agentic Hackathon. Experimental. Aggregate affinity is not a viewer profile, a sync license, or a prediction that the opening film will work.
-
-License: MIT.
-
-**Built with:** Next.js, TypeScript, Qloo Hackathon API (GET /search, GET /v2/tags, GET /v2/insights with feature.explainability=true).
-
-## Demo script
-
-About two minutes. No login. If the banner says FIXTURE, say the IDs were written for the demo. Do not show the API key or the `X-Api-Key` header.
-
-1. The Hong Kong coffee brief is already loaded. Left: Lo-fi, slow push-in, warm bokeh, no ID. Right: Hong Kong and The Coffee Academics in; Tatsuro Yamashita and In the Mood for Love out, each with contributor scores. The rule on the slip is 0.10.
-2. Open the request trace. Fixture rows say NOT SENT. Live rows say SENT. Read the two insights rows: artist and movie, both with feature.explainability=true.
-3. Click Contrast brief. The line becomes a Tokyo record shop. The right side says Nothing to call. No signature. The coffee entities are gone. Say this line is the control, not a second city.
-4. Click Demo scene. Open Signed summary of these IDs. The page says HOLDS and repeats the same entity IDs. Say the signature is a demo key in the repo, not the Qloo key.
-5. Close on the line: remove Qloo and the right column has nothing to commit.
+The live banner is: "FIXTURE. QLOO_API_KEY is not set. IDs starting with fixture: and the scores under them were written for this demo. They are not a Qloo response."
 
 ## Deploy
 
-The public URL above is fixture mode on GitHub Pages (`docs/` on `main`). `npm run pages` rebuilds that folder. The browser runs the fixture. It does not call Qloo.
+`npm run pages` rebuilds `docs/` from this directory. The browser runs the fixture. It does not call Qloo.
 
-The anonymous Vercel deploy expired at 2026-10-10 21:20 UTC. This machine is logged out, and `vercel login` needs a person. To publish a logged-in Vercel host later:
+A logged-in Vercel host is still the path for a live key. This machine is logged out, and `vercel login` needs a person. To publish later:
 
 ```bash
 npx vercel login
@@ -74,36 +83,32 @@ npx vercel env add QLOO_API_KEY production
 npx vercel --prod
 ```
 
-Skip `env add` to publish fixture mode. The banner will say FIXTURE. Do not prefix the variable with `NEXT_PUBLIC_`. Cloudflare steps are in `README.md`. This machine did not deploy there: Wrangler was logged out, and Wrangler 4.149 wants Node.js 22. Set the key with `npx wrangler secret put QLOO_API_KEY`, not in a config file.
+Skip `env add` to publish fixture mode. The banner will say FIXTURE. Do not prefix the variable with `NEXT_PUBLIC_`. Cloudflare steps are in `README.md`. This machine did not deploy there. Set the key with `npx wrangler secret put QLOO_API_KEY`, not in a config file.
 
-After the key is on the server, `npm run probe` checks live `/search`, `/v2/tags`, and `/v2/insights` and prints counts only. It does not print the key.
+After the key is on a server, `npm run probe` checks live `/search`, `/v2/tags`, and `/v2/insights` and prints counts only. It does not print the key. This machine printed nothing this round because `QLOO_API_KEY` is unset. Do not relabel fixture scores as live.
 
 ## Checklist
 
 Done in this tree:
 
-- [x] Product is Frame Call. Not Taste Gate, not a chat.
-- [x] Right column commits only from search, tags, insights, and explainability. Threshold 0.10.
+- [x] Product is Frame Call. The right column commits only from search, tags, insights, and explainability. Threshold 0.10.
 - [x] Second brief is the contrast withdrawal. It does not search a second city.
 - [x] Fixture mode runs with no key. Banner says FIXTURE. IDs start with `fixture:`.
-- [x] Live mode does not fall back to fixture bodies. Covered by tests with a fake fetch.
-- [x] `QLOO_API_KEY` is server-only. `.env.example` is empty. `.env` and `.env.local` are gitignored.
-- [x] Responses that echo the key are withheld.
-- [x] English README, Devpost text, and demo script.
-- [x] MIT `LICENSE` at the app root.
-- [x] `vercel.json` plus Vercel and Cloudflare steps.
-- [x] Public fixture demo: https://er-s-an.github.io/frame-call/ . Banner says FIXTURE. The fixture runs in the browser. No key is on that host.
-- [x] Public Git repository: https://github.com/er-s-an/frame-call with MIT `LICENSE`.
+- [x] `QLOO_API_KEY` is server-only. It is not in the repository.
+- [x] English README, Devpost paste, two-minute path, and `DEMO.md`.
+- [x] MIT `LICENSE` at the repository root, and GitHub About shows MIT License.
+- [x] Public fixture demo: https://er-s-an.github.io/frame-call/
+- [x] Public repository matches Pages for the six files above.
+- [x] Judge path clicked on that URL: commit, trace NOT SENT, contrast withdrawal, restore, HOLDS.
 
 Still a person:
 
-- [x] Durable public fixture URL: https://er-s-an.github.io/frame-call/ . The anonymous Vercel deploy expired at 2026-10-10 21:20 UTC. This machine could not `vercel login`, so `npx vercel --prod` was not run.
 - [ ] Join https://qloo.devpost.com/
-- [ ] Put the hackathon key in the host environment. Do not commit it.
-- [ ] Run `npm run probe` on a machine that has the key. If it prints `PROBE_THIN`, keep the product shape and do not relabel fixture scores as live.
-- [ ] Paste https://er-s-an.github.io/frame-call/ . Do not paste the expired Vercel URL.
-- [ ] Submit on Devpost before the deadline. No login on the demo. No video is required. Do not treat this file as a click on Submit.
+- [ ] Paste the Pages URL into Try it out. Paste `DEVPOST.md` into the description. Paste the repository URL.
+- [ ] Leave the video field empty unless someone records `DEMO.md`.
+- [ ] Submit on Devpost before Oct 30, 2026, 11:45pm EDT. Do not treat this file as that click.
+- [ ] Put the hackathon key on a server only if a live banner is required. Then run `npm run probe`. If it prints `PROBE_THIN`, keep the product shape and do not relabel fixture scores as live.
 
 ## What this does not claim
 
-No customer, no revenue, no sync license, no personal taste profile, and no proof the film will work. The receipt key in the repo is a demo key. It is not the Qloo key.
+No customer, no revenue, no sync license, no personal taste profile, and no proof the film will work. The receipt key in the repo is a demo key. It is not the Qloo key. The Wong Kar-wai line under the film title is local knowledge about that title. It has no separate entity ID on the slip. No demo video was rendered for this packet.
