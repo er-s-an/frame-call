@@ -1,4 +1,5 @@
 import { createPrivateKey, createPublicKey, sign, verify } from "node:crypto";
+import { canonical } from "./canonical";
 
 /**
  * Demo receipt key. It is in the repository on purpose.
@@ -19,13 +20,7 @@ MCowBQYDK2VwAyEAye0PFthcqmu5sIs9SE2qKS6n4FE7klghP9sB8NXq8Fk=
 const privateKey = createPrivateKey(PRIVATE_PEM);
 const publicKey = createPublicKey(PUBLIC_PEM);
 
-export function canonical(value: unknown): string {
-  if (value === null || typeof value !== "object") return JSON.stringify(value);
-  if (Array.isArray(value)) return `[${value.map((item) => canonical(item)).join(",")}]`;
-  const record = value as Record<string, unknown>;
-  const keys = Object.keys(record).sort();
-  return `{${keys.map((key) => `${JSON.stringify(key)}:${canonical(record[key])}`).join(",")}}`;
-}
+export { canonical } from "./canonical";
 
 export function signPayload(value: unknown): { payload: string; signature: string; publicKey: string } {
   const json = canonical(value);

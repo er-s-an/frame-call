@@ -83,10 +83,14 @@ export function Studio({
   initial,
   demoBrief,
   contrastBrief,
+  readBrief,
+  receiptPath = "/verify",
 }: {
   initial: CallResult;
   demoBrief: string;
   contrastBrief: string;
+  readBrief?: (brief: string) => Promise<CallResult>;
+  receiptPath?: string;
 }) {
   const [brief, setBrief] = useState(initial.brief || demoBrief);
   const [result, setResult] = useState(initial);
@@ -97,6 +101,10 @@ export function Studio({
     setPending(true);
     setError(null);
     try {
+      if (readBrief) {
+        setResult(await readBrief(nextBrief));
+        return;
+      }
       const response = await fetch("/api/call", {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -113,7 +121,7 @@ export function Studio({
   }
 
   const receipt = result.receipt
-    ? `/verify?p=${encodeURIComponent(result.receipt.payload)}&s=${encodeURIComponent(result.receipt.signature)}`
+    ? `${receiptPath}?p=${encodeURIComponent(result.receipt.payload)}&s=${encodeURIComponent(result.receipt.signature)}`
     : null;
 
   return (

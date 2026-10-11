@@ -376,14 +376,16 @@ async function runLive(brief: string, apiKey: string, fetchImpl: FetchLike): Pro
   }
 }
 
+function readEnvKey(): string | null {
+  if (typeof process === "undefined" || process.env == null) return null;
+  return process.env.QLOO_API_KEY?.trim() || null;
+}
+
 export async function runCall(
   brief: string,
   options?: { apiKey?: string | null; fetchImpl?: FetchLike },
 ): Promise<CallResult> {
-  const apiKey =
-    options && "apiKey" in options
-      ? options.apiKey?.trim() || null
-      : process.env.QLOO_API_KEY?.trim() || null;
+  const apiKey = options && "apiKey" in options ? options.apiKey?.trim() || null : readEnvKey();
   const text = brief.trim();
   if (!text) {
     return emptyResult({

@@ -71,15 +71,23 @@ Copy `.env.example` to `.env.local` for a local key. Both `.env` and `.env.local
 
 ## Deploy
 
-The key stays in the host's environment, not in `vercel.json` and not in the client bundle. Home, `/api/call`, and `/verify` run on the Node.js runtime because the receipt uses `node:crypto`.
+The key stays in the host's environment, not in `vercel.json` and not in the client bundle. On the Next.js server, home, `/api/call`, and `/verify` run on the Node.js runtime because the receipt uses `node:crypto`.
 
 ### Public fixture demo
 
-https://temporary-spry-marsh-vhqvnvx.vercel.app
+https://er-s-an.github.io/frame-call/
 
-Checked on 2026-10-10. `GET /api/call` returns `{"mode":"fixture","keyConfigured":false}`. The banner says FIXTURE. That host has no `QLOO_API_KEY`.
+Checked on 2026-10-11. GitHub Pages serves `docs/` from `main`. There is no server and no `QLOO_API_KEY`. The fixture runs in the browser. The banner says FIXTURE. IDs start with `fixture:`. The page does not call `hackathon.api.qloo.com`.
 
-The deployment is anonymous. The Vercel CLI on the build machine was logged out, so this is not a durable project. The URL expires at 2026-10-10 21:20 UTC unless a person claims it. The claim link is a secret and is not in this repository. After expiry, deploy again with the logged-in commands below. Do not paste an expired URL into Devpost.
+Rebuild the folder from this directory:
+
+```bash
+npm run pages
+```
+
+The anonymous Vercel URL expired at 2026-10-10 21:20 UTC. Do not paste it into Devpost. A logged-in Vercel deploy is still the path for a live key. This machine was logged out.
+
+A local Next server with no key still answers `GET /api/call` with `{"mode":"fixture","keyConfigured":false}`. The Pages host has no `/api/call`. The banner is the judge-facing signal.
 
 ### Vercel, durable
 
@@ -95,7 +103,7 @@ npx vercel --prod
 
 Skip `env add` to ship fixture mode. The banner will say FIXTURE until the variable is set and the deployment is redeployed. The home page is dynamic, so the banner follows the server environment rather than the build machine.
 
-The command that created the temporary URL is `env -u CI npx vercel deploy --temporary --yes`. Do not pass `--archive`. `CI=true` makes the CLI refuse an anonymous deploy. That command works only until the anonymous project expires or is claimed. It does not replace `vercel login`.
+`env -u CI npx vercel deploy --temporary --yes` created the expired anonymous URL. Do not use it again. It is not a durable host, and `vercel login` is required before `npx vercel --prod`.
 
 Dashboard path: import the Git repository, framework Next.js, root this directory. Add `QLOO_API_KEY` under Environment Variables. Do not enable "Expose to Browser".
 

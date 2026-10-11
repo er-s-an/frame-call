@@ -2,7 +2,7 @@
 
 Paste the sections below into the Devpost submission. Do not add a screenshot that shows an API key.
 
-Do not paste this paragraph. The fixture demo is https://temporary-spry-marsh-vhqvnvx.vercel.app until 2026-10-10 21:20 UTC. The banner says FIXTURE. There is no `QLOO_API_KEY` on that server. The deployment is anonymous. Claim it or replace it with a durable URL before you put a link on Devpost. Do not put the claim link in Devpost or in git. The steps below match that host.
+Do not paste this paragraph. The fixture demo is https://er-s-an.github.io/frame-call/ . The banner says FIXTURE. There is no server and no `QLOO_API_KEY`. The fixture runs in the browser. The anonymous Vercel URL expired at 2026-10-10 21:20 UTC. Paste the Pages URL if you put a link on Devpost. Do not click Submit from this file. The steps below match that host.
 
 ## Title
 
@@ -32,7 +32,7 @@ The left column can still print adjectives. That is the point. Adjectives are no
 
 How to try it, no login:
 
-1. Open the site. Read the banner. FIXTURE means the server has no QLOO_API_KEY and the IDs start with fixture:. LIVE means this request hit hackathon.api.qloo.com.
+1. Open the site. Read the banner. FIXTURE means QLOO_API_KEY is not set and the IDs start with fixture:. LIVE means this request hit hackathon.api.qloo.com. The public Pages demo has no server, so it stays on FIXTURE.
 2. The demo brief is already filled in. The left column has no IDs. The right column names the entities and the scores.
 3. Open the request trace.
 4. Click Contrast brief. The right side says Nothing to call.
