@@ -20,8 +20,8 @@ Only two lines are authored.
 
 | Button | Line | Result |
 | --- | --- | --- |
-| Demo scene | 香港独立咖啡品牌，要一条 15 秒的开业片 | Commits, when the graph has a path. A Hong Kong independent coffee brand, 15-second opening film. |
-| Contrast brief | 东京唱片店，要一条 15 秒的片 | Withdraws. A Tokyo record shop, 15 seconds. Not a second city. The coffee entities are not reused, and Tokyo is not searched. |
+| Demo scene | Hong Kong independent coffee brand, need a 15-second opening film | Commits, when the graph has a path. A Hong Kong independent coffee brand, 15-second opening film. |
+| Contrast brief | Tokyo record shop, need a 15-second film | Withdraws. A Tokyo record shop, 15 seconds. Not a second city. The coffee entities are not reused, and Tokyo is not searched. |
 
 Anything else withdraws the same way: Nothing to call.
 

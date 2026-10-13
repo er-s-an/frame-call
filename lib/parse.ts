@@ -1,13 +1,13 @@
 import type { ParsedBrief } from "./types";
 
 /** The only brief that may commit. */
-export const DEMO_BRIEF = "香港独立咖啡品牌，要一条 15 秒的开业片";
+export const DEMO_BRIEF = "Hong Kong independent coffee brand, need a 15-second opening film";
 
 /**
  * The second authored brief, and the last one.
  * It exists so a judge can withdraw the slip. It is not a second city product.
  */
-export const CONTRAST_BRIEF = "东京唱片店，要一条 15 秒的片";
+export const CONTRAST_BRIEF = "Tokyo record shop, need a 15-second film";
 
 function hasHongKong(text: string): boolean {
   return /香港|hong\s*kong/i.test(text);

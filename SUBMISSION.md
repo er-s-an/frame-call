@@ -33,9 +33,9 @@ Adjectives are not a call. The contrast brief is the on-screen proof: a Tokyo re
 
 No login. Open https://er-s-an.github.io/frame-call/ . If the banner says FIXTURE, say the IDs were written for the demo. Do not show an API key or an `X-Api-Key` header. Devpost does not require a video. `DEMO.md` is the spoken script for the same path.
 
-1. The Hong Kong coffee brief is already loaded: `香港独立咖啡品牌，要一条 15 秒的开业片`. Left: Lo-fi, slow push-in, warm bokeh, no ID. Right: Hong Kong and The Coffee Academics in. Tatsuro Yamashita out at affinity 0.74, contributors 0.61 and 0.33. In the Mood for Love out at affinity 0.69, contributors 0.72 and 0.22. The rule on the slip is a contributor of at least 0.10.
+1. The Hong Kong coffee brief is already loaded: `Hong Kong independent coffee brand, need a 15-second opening film`. Left: Lo-fi, slow push-in, warm bokeh, no ID. Right: Hong Kong and The Coffee Academics in. Tatsuro Yamashita out at affinity 0.74, contributors 0.61 and 0.33. In the Mood for Love out at affinity 0.69, contributors 0.72 and 0.22. The rule on the slip is a contributor of at least 0.10.
 2. Open Request trace. Fixture rows say NOT SENT. Read the two insights rows: `urn:entity:artist` and `urn:entity:movie`, both with `feature.explainability=true`. On this host every row says NOT SENT.
-3. Click Contrast brief. The line becomes `东京唱片店，要一条 15 秒的片`. The right side says Nothing to call. Nothing to sign. The coffee entities are gone. Say this line is the control, not a second city.
+3. Click Contrast brief. The line becomes `Tokyo record shop, need a 15-second film`. The right side says Nothing to call. Nothing to sign. The coffee entities are gone. Say this line is the control, not a second city.
 4. Click Demo scene. Click Signed summary of these IDs. The page says HOLDS. Mode says "Fixture. Not a live Qloo response." The music ID `fixture:artist:tatsuro-yamashita` and the camera ID `fixture:movie:in-the-mood-for-love` match the slip. Say the signature is a demo key in the repo, not the Qloo key.
 5. Close on the line: remove Qloo and the right column has nothing to commit.
 
